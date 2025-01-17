@@ -62,9 +62,9 @@ body {
 #bio {
   display: flex;
 
-  margin-bottom: 57px;
+  margin-bottom: 3%;
 
-  margin-top: 50px;
+  margin-top: 3%;
 }
 .page-section {
   width: 80%;
@@ -217,9 +217,18 @@ summary::before {
   margin-right: 10px; /* Adds space between the circle and the text */
   color: black; /* Symbol color */
   background-color: white; /* Circle background color */
+
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-details[open] summary::before {
+summary:hover::before {
+  scale: 1.1;
+  border: 3px solid white;
+  background-color: #000000;
+  color: white;
+}
+
+[open] summary::before {
   content: "- "; /* Change symbol when open */
 }
 
@@ -258,7 +267,7 @@ details[open] summary::before {
 }
 
 .campus {
-  height: 300px;
+  height: 27.3%;
   overflow: hidden;
   background-image: url("Images/mcmaster_campus.jpeg");
   background-size: 100% auto;
@@ -321,4 +330,33 @@ p {
 }
 .idk {
   font-style: italic;
+}
+.project-block {
+  display: flex;
+  padding: 2%;
+  border: #000000 solid 4px;
+  background-color: aquamarine;
+  border-radius: 2%;
+}
+.project-name {
+  padding-bottom: 1%;
+}
+.project-block img {
+  width: 70%;
+  height: auto;
+  margin-right: 3%;
+}
+
+.project-block .project-description {
+  text-align: left; /* Ensure the text aligns to the left */
+}
+
+.skill-tags {
+  background-color: white;
+  padding: 0.5% 0.5%;
+  display: inline-block;
+  border: #000000 3px solid;
+  border-radius: 2%;
+  font-size: 80%;
+  text-align: left;
 }
