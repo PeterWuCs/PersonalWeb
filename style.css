@@ -1,0 +1,324 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+body {
+  min-height: 200vh; /* This makes sure you have enough space to scroll */
+}
+
+/* Add a black background color to the top navigation */
+.Navigation_Bar {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  overflow: hidden;
+
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* Ensures the nav stays on top of other elements */
+}
+.Navigation_Bar img {
+  float: left;
+  margin-right: 800px;
+  width: 120px;
+  height: auto;
+}
+/* Style the links inside the navigation bar */
+.Navigation_Bar a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Change the color of links on hover */
+.Navigation_Bar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.Navigation_Bar a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+#profile_pic {
+  width: 260px; /* Set the width of the image */
+  height: 260px; /* Set the height of the image */
+  border-radius: 50%; /* Make the image a circle */
+  object-fit: cover; /* 
+  Ensure the image covers the circle properly */
+
+  transition: opacity 0.2s ease; /* Smooth fade effect for opacity */
+  opacity: 1;
+}
+#bio {
+  display: flex;
+
+  margin-bottom: 57px;
+
+  margin-top: 50px;
+}
+.page-section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+}
+.logos img {
+  padding: 40px;
+  width: 50px;
+  height: 50px;
+}
+.profile {
+  align-items: center;
+  padding-right: 100px;
+}
+.logos a:hover {
+  scale: 1.2;
+}
+
+.download img {
+  width: auto;
+  height: 60px;
+  padding-right: 10px;
+  object-fit: fit;
+}
+.download {
+  display: flex;
+}
+
+.download a {
+  display: flex;
+}
+
+.download_button {
+  background-color: rgb(0, 0, 0);
+  padding: 10px 10px; /* Increase the left and right padding */
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  align-items: center; /* Vertically center the content */
+  justify-content: center;
+  font-size: 18px;
+  width: 220px;
+}
+
+#resume_button {
+  margin-right: 10px;
+}
+#cv_button {
+  margin-left: 10px;
+}
+
+.Section_Icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 100px;
+}
+
+#education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%; /* Full width */
+}
+
+.section_Header {
+  display: flex;
+  justify-content: center; /* Centers the title horizontally */
+  align-items: center;
+  font-size: 30px;
+}
+
+#Courses {
+  list-style-type: none;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+  background-color: rgb(245, 245, 245);
+}
+.subjects li {
+  padding: 10p x 5px;
+  border-bottom: 0.5px solid #000000;
+}
+
+.sublist-header div {
+  text-align: center;
+  padding-right: 30px;
+  margin-right: 180px;
+}
+.sublist-header {
+  display: flex; /* Use flexbox for equal spacing */
+  font-weight: bold;
+}
+.course-list {
+  border: 1px solid #04aa6d;
+  margin: auto;
+  width: 80%;
+}
+.course-details {
+  display: flex; /* Use flexbox for equal spacing */
+}
+.course-details div {
+  text-align: center;
+  padding-right: 30px;
+  margin-right: 180px;
+}
+.grade {
+  margin-left: 90px;
+}
+
+section {
+  max-width: 70%; /* Adjust as needed */
+  margin: 0 auto; /* Centers horizontally */
+  text-align: center;
+}
+
+.text_holder {
+  text-align: left;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+summary::marker {
+  content: ""; /* Remove the default arrow */
+}
+
+summary::before {
+  content: "+";
+  display: inline-block; /* Ensures it behaves like a block for styling */
+  width: 20px; /* Circle diameter */
+  height: 20px; /* Circle diameter */
+
+  text-align: center; /* Centers the text horizontally */
+  border: 4px solid black; /* Thickness of the circle's border */
+  border-radius: 50%; /* Makes it a circle */
+  font-weight: 1100; /* Increases symbol thickness */
+  margin-right: 10px; /* Adds space between the circle and the text */
+  color: black; /* Symbol color */
+  background-color: white; /* Circle background color */
+}
+
+details[open] summary::before {
+  content: "- "; /* Change symbol when open */
+}
+
+.sub {
+  text-decoration: none;
+}
+
+.sub.underlined {
+  text-decoration: underline; /* Apply underline when clicked */
+}
+
+.class-list {
+  border: 2px solid #ccc;
+}
+
+.class-list li {
+  display: grid;
+  grid-template-columns: 150px 500px 150px;
+  gap: 20px;
+  padding: 5px 0;
+  text-align: left;
+}
+
+.class-list li:last-child {
+  border: none;
+}
+
+.class-list li p {
+  margin: 0;
+}
+
+.class-list li:first-child {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.campus {
+  height: 300px;
+  overflow: hidden;
+  background-image: url("Images/mcmaster_campus.jpeg");
+  background-size: 100% auto;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+#sectionone {
+  height: 100vh;
+}
+
+#Courses summary:hover {
+  background-color: rgb(155, 155, 155);
+  border-radius: 1%;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+#Courses summary:hover h1 {
+  color: white;
+  transition: color 0.2s ease, transform 0.2s ease;
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+#Courses summary h1 {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.sub {
+  text-decoration: none;
+}
+
+.sub.underlined {
+  text-decoration: underline; /* Apply underline when clicked */
+}
+
+.important-course {
+  background-color: #ddd;
+}
+
+.important-course p {
+  font-weight: bold;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; /* Normal weight */
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 800; /* Bold weight */
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; /* Light weight */
+  font-size: 18px;
+}
+.idk {
+  font-style: italic;
+}
