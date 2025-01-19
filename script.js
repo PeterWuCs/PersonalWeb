@@ -113,3 +113,27 @@ function handleSubClicked() {
 document.querySelectorAll("summary").forEach((element) => {
   element.addEventListener("click", handleSubClicked); // Attach the click handler to each summary
 });
+
+const projectElements = document.querySelectorAll(".project-block");
+
+function onScroll() {
+  projectElements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+
+    const windowHeight = window.innerHeight;
+
+    // Check if the element is in the viewport (either entering or exiting)
+    if (elementTop < windowHeight - 200) {
+      element.classList.add("show");
+      element.classList.remove("hidden");
+    } else {
+      element.classList.remove("show");
+      element.classList.add("hidden");
+    }
+  });
+}
+
+window.addEventListener("scroll", onScroll);
+
+// Initial check to show elements already in view
+onScroll();

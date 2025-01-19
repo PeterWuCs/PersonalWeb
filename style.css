@@ -72,12 +72,19 @@ body {
 
   height: 60%;
 }
+/*
+.text_holder p {
+}
+*/
 
+.page-section:not(:first-of-type) {
+  padding: 3%;
+  border-bottom: 3px solid rgba(99, 99, 99, 0.5);
+}
 .page-section {
   width: 80%;
   margin: 0 auto;
 }
-
 .logos {
   display: flex;
   justify-content: center;
@@ -386,6 +393,10 @@ p {
   margin-bottom: 5%;
 
   box-shadow: 0 20px 20px grey;
+
+  transform: translateX(-125%);
+
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .project-name {
@@ -398,6 +409,22 @@ p {
   margin-right: 3%;
 
   box-shadow: 0 10px 20px grey;
+}
+
+/* Hidden elements are invisible and offset */
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%); /* Start off-screen */
+
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Show elements with opacity and normal position */
+.show {
+  opacity: 1;
+  transform: translateX(0); /* Bring it into view */
+
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .project-block .project-description {

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Animation</title>
+    <style>
+      /* General styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      .content {
+        padding: 50px;
+      }
+
+      .content-element {
+        opacity: 0;
+        transform: translateX(-50px); /* Slide in from the left */
+        transition: transform 0.6s ease, opacity 0.6s ease;
+      }
+
+      .content-element.show {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .hidden {
+        visibility: hidden; /* Ensures content isn't visible until animation starts */
+      }
+
+      /* Extra content above to make the page scrollable */
+      .spacer {
+        height: 13000px; /* Create space to scroll */
+        background-color: lightgray;
+        text-align: center;
+        padding-top: 30px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Extra content above to test the scroll -->
+    <div class="spacer">Scroll down to see the animation!</div>
+
+    <section class="content">
+      <div class="content-element hidden">Content 1</div>
+      <div class="content-element hidden">Content 2</div>
+      <div class="content-element hidden">Content 3</div>
+    </section>
+
+    <div class="spacer"></div>
+
+    <script>
+      // Select all elements with the class 'content-element'
+      const contentElements = document.querySelectorAll(".content-element");
+
+      function onScroll() {
+        contentElements.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          // Check if the element is in the viewport
+          if (elementTop < windowHeight) {
+            element.classList.add("show");
+            element.classList.remove("hidden"); // Make it visible
+          }
+        });
+      }
+
+      // Add scroll event listener
+      window.addEventListener("scroll", onScroll);
+
+      // Initial check to show elements already in view
+      onScroll();
+    </script>
+  </body>
+</html>
