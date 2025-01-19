@@ -21,7 +21,6 @@
       <div class="Navigation_Bar">
         <img src="Images/Peter.webp" alt="Peter Wu Logo" height="180" />
 
-        <a href="#Bio">Bio</a>
         <a href="#Education">Education</a>
         <!--<a href="#Experience">Experience</a>-->
         <a href="#Projects">Projects</a>
@@ -34,15 +33,27 @@
           <img src="Images/profile.jpeg" alt="profile pic" id="profile_pic" />
 
           <div class="logos">
-            <a href="mailto:wu729@mcmaster.ca" id="email">
-              <img src="Images/email_logo.png" />
-            </a>
-            <a href="http://www.linkedin.com/in/peter-wu6/" id="linkedin">
-              <img src="Images/linkdin_logo.webp" alt="" />
+            <a href="mailto:wu729@mcmaster.ca" target="_blank" \>
+              <div class="circle-con">
+                <img src="Images/email.png" class="circle" id="email" />
+              </div>
             </a>
 
-            <a href="https://github.com/PeterWuCs" id="github">
-              <img src="Images/github_logo.webp" />
+            <a href="http://www.linkedin.com/in/peter-wu6/" target="_blank">
+              <div class="circle-con">
+                <img
+                  src="Images/linkedin.svg"
+                  alt=""
+                  class="circle"
+                  id="linkedin"
+                />
+              </div>
+            </a>
+
+            <a href="https://github.com/PeterWuCs" target="_blank">
+              <div class="circle-con">
+                <img src="Images/github.svg" id="github" class="circle" />
+              </div>
             </a>
           </div>
 
@@ -53,7 +64,7 @@
               id="resume_button"
               target="_blank"
             >
-              <img src="Images/resume_logo.jpg" />
+              <img src="Images/resume.svg" />
               <h4>See My Resume</h4>
             </a>
 
@@ -63,7 +74,7 @@
               id="cv_button"
               target="_blank"
             >
-              <img src="Images/resume_logo.jpg" />
+              <img src="Images/resume.svg" />
               <h4>See My CV</h4>
             </a>
           </div>
@@ -103,7 +114,7 @@
 
     <section id="Education" class="page-section">
       <div class="section_Header">
-        <img src="Images/Education.png" class="Section_Icon" />
+        <img src="Images/education.svg.png" class="Section_Icon" />
         <h1><b>Education</b></h1>
       </div>
 
@@ -151,11 +162,29 @@
 
     <section id="Projects" class="page-section">
       <div class="section_Header">
-        <img src="Images/project_logo.jpeg" class="Section_Icon" />
+        <img src="Images/project.svg.png" class="Section_Icon" />
         <h1><b>Projects</b></h1>
       </div>
 
       <div class="project_container">
+        <div class="project-block">
+          <img src="Images/war_of_pets.jpg" class="project-image" />
+          <div class="non-image-part">
+            <h1 class="project-name">War of pets</h1>
+            <div class="project-description">
+              <p class="project-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+              <span class="skill-tags">Python</span>
+              <span class="skill-tags">c++</span>
+              <span class="skill-tags">R</span>
+            </div>
+          </div>
+        </div>
+
         <div class="project-block">
           <img src="Images/war_of_pets.jpg" class="project-image" />
           <div class="non-image-part">
@@ -178,7 +207,7 @@
 
     <section id="Courses" class="page-section">
       <div class="section_Header">
-        <img src="Images/courses_logo.jpeg" class="Section_Icon" />
+        <img src="Images/class.svg" class="Section_Icon" />
         <h1><b>Courses</b></h1>
       </div>
       <div class="subjects">
@@ -352,7 +381,7 @@
 
     <section id="Publications" class="page-section">
       <div class="section_Header" \>
-        <img src="Images/pub_logo.png" class="Section_Icon" />
+        <img src="Images/book.svg" class="Section_Icon" />
         <h1><b>Publications</b></h1>
       </div>
       <h1 class="idk">There will be more coming, I promise.</h1>

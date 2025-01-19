@@ -4,7 +4,9 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth; /* Enables smooth scrolling */
+  background-color: white;
 }
+
 body {
   min-height: 200vh; /* This makes sure you have enough space to scroll */
 }
@@ -13,19 +15,23 @@ body {
 .Navigation_Bar {
   display: flex;
   align-items: center;
-  background-color: #000000;
+  background-color: black;
   overflow: hidden;
-
   position: sticky;
   top: 0;
   z-index: 9999; /* Ensures the nav stays on top of other elements */
+
+  height: 10%;
+  box-shadow: 0 10px 20px grey;
 }
+
 .Navigation_Bar img {
   float: left;
   margin-right: 800px;
   width: 120px;
   height: auto;
 }
+
 /* Style the links inside the navigation bar */
 .Navigation_Bar a {
   float: right;
@@ -53,19 +59,20 @@ body {
   width: 260px; /* Set the width of the image */
   height: 260px; /* Set the height of the image */
   border-radius: 50%; /* Make the image a circle */
-  object-fit: cover; /* 
-  Ensure the image covers the circle properly */
-
+  object-fit: cover; /* Ensure the image covers the circle properly */
   transition: opacity 0.2s ease; /* Smooth fade effect for opacity */
   opacity: 1;
+  border: double 10px black;
 }
+
 #bio {
   display: flex;
 
-  margin-bottom: 3%;
-
   margin-top: 3%;
+
+  height: 60%;
 }
+
 .page-section {
   width: 80%;
   margin: 0 auto;
@@ -75,25 +82,50 @@ body {
   display: flex;
   justify-content: center;
 }
-.logos img {
-  padding: 40px;
-  width: 50px;
-  height: 50px;
+
+.logos a {
+  display: inline-block; /* Ensures the container behaves properly */
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Ensures child elements control the color */
 }
+
+.circle-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Make the container a circle */
+
+  width: 70px; /* Consistent size */
+  height: 70px;
+  margin: 30px; /* Spacing between logos */
+}
+
+.circle-con img {
+  width: 100%; /* Image fills the container */
+  height: 100%;
+  object-fit: cover; /* Ensures proportional cropping */
+  transition: transform 0.3s ease; /* Adds smooth scaling effect */
+}
+
+.circle-con img:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
 .profile {
   align-items: center;
   padding-right: 100px;
-}
-.logos a:hover {
-  scale: 1.2;
 }
 
 .download img {
   width: auto;
   height: 60px;
-  padding-right: 10px;
+  margin-right: 4%;
+  background-color: white;
   object-fit: fit;
+
+  border-radius: 25%;
 }
+
 .download {
   display: flex;
 }
@@ -104,7 +136,7 @@ body {
 
 .download_button {
   background-color: rgb(0, 0, 0);
-  padding: 10px 10px; /* Increase the left and right padding */
+  padding: 8px 8px; /* Increase the left and right padding */
   border-radius: 20px;
   text-decoration: none;
   color: white;
@@ -112,18 +144,21 @@ body {
   justify-content: center;
   font-size: 18px;
   width: 220px;
+
+  box-shadow: 0 10px 20px grey;
 }
 
 #resume_button {
   margin-right: 10px;
 }
+
 #cv_button {
   margin-left: 10px;
 }
 
 .Section_Icon {
-  width: 50px;
-  height: 50px;
+  width: 5%;
+  height: auto;
   margin-right: 100px;
 }
 
@@ -152,6 +187,7 @@ ul {
   list-style-type: none;
   background-color: rgb(245, 245, 245);
 }
+
 .subjects li {
   padding: 10p x 5px;
   border-bottom: 0.5px solid #000000;
@@ -162,23 +198,28 @@ ul {
   padding-right: 30px;
   margin-right: 180px;
 }
+
 .sublist-header {
   display: flex; /* Use flexbox for equal spacing */
   font-weight: bold;
 }
+
 .course-list {
   border: 1px solid #04aa6d;
   margin: auto;
   width: 80%;
 }
+
 .course-details {
   display: flex; /* Use flexbox for equal spacing */
 }
+
 .course-details div {
   text-align: center;
   padding-right: 30px;
   margin-right: 180px;
 }
+
 .grade {
   margin-left: 90px;
 }
@@ -191,6 +232,8 @@ section {
 
 .text_holder {
   text-align: left;
+  max-height: 40%;
+  width: 60%;
 }
 
 summary {
@@ -209,7 +252,6 @@ summary::before {
   display: inline-block; /* Ensures it behaves like a block for styling */
   width: 20px; /* Circle diameter */
   height: 20px; /* Circle diameter */
-
   text-align: center; /* Centers the text horizontally */
   border: 4px solid black; /* Thickness of the circle's border */
   border-radius: 50%; /* Makes it a circle */
@@ -217,7 +259,6 @@ summary::before {
   margin-right: 10px; /* Adds space between the circle and the text */
   color: black; /* Symbol color */
   background-color: white; /* Circle background color */
-
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
@@ -242,6 +283,8 @@ summary:hover::before {
 
 .class-list {
   border: 2px solid #ccc;
+
+  box-shadow: 0 10px 20px grey;
 }
 
 .class-list li {
@@ -267,9 +310,9 @@ summary:hover::before {
 }
 
 .campus {
-  height: 27.3%;
+  height: 24%;
   overflow: hidden;
-  background-image: url("Images/mcmaster_campus.jpeg");
+  background-image: url("Images/campus.png");
   background-size: 100% auto;
   background-position: top;
   background-attachment: fixed;
@@ -328,23 +371,33 @@ p {
   font-weight: 400; /* Light weight */
   font-size: 18px;
 }
+
 .idk {
   font-style: italic;
 }
+
 .project-block {
   display: flex;
   padding: 2%;
   border: #000000 solid 4px;
   background-color: aquamarine;
   border-radius: 2%;
+
+  margin-bottom: 5%;
+
+  box-shadow: 0 20px 20px grey;
 }
+
 .project-name {
   padding-bottom: 1%;
 }
+
 .project-block img {
   width: 70%;
   height: auto;
   margin-right: 3%;
+
+  box-shadow: 0 10px 20px grey;
 }
 
 .project-block .project-description {
