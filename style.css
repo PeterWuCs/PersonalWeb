@@ -440,3 +440,11 @@ p {
   font-size: 80%;
   text-align: left;
 }
+
+.image-copyright {
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 10px;
+}
