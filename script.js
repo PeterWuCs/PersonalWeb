@@ -123,7 +123,7 @@ function onScroll() {
     const windowHeight = window.innerHeight;
 
     // Check if the element is in the viewport (either entering or exiting)
-    if (elementTop < windowHeight - 200) {
+    if (elementTop < windowHeight - 250) {
       element.classList.add("show");
       element.classList.remove("hidden");
     } else {
