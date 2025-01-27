@@ -82,27 +82,27 @@ function changeImage(imageSrc) {
 
 // Add event listeners to change the image src on hover
 hoverTarget1.addEventListener("mouseenter", () => {
-  changeImage("Images/left.webp"); // Change to the new image
+  changeImage("Images/profile_left.jpg"); // Change to the new image
 });
 
 hoverTarget1.addEventListener("mouseleave", () => {
-  changeImage("Images/profile.jpeg"); // Revert back to the original image
+  changeImage("Images/profile_pic.jpg"); // Revert back to the original image
 });
 
 hoverTarget2.addEventListener("mouseenter", () => {
-  changeImage("Images/right.jpg"); // Change to the new image
+  changeImage("Images/profile_right.jpg"); // Change to the new image
 });
 
 hoverTarget2.addEventListener("mouseleave", () => {
-  changeImage("Images/profile.jpeg"); // Revert back to the original image
+  changeImage("Images/profile_pic.jpg"); // Revert back to the original image
 });
 
 hoverTarget3.addEventListener("mouseenter", () => {
-  changeImage("Images/down.jpg"); // Change to the new image
+  changeImage("Images/profile_down.jpg"); // Change to the new image
 });
 
 hoverTarget3.addEventListener("mouseleave", () => {
-  changeImage("Images/profile.jpeg"); // Revert back to the original image
+  changeImage("Images/profile_pic.jpg"); // Revert back to the original image
 });
 
 function handleSubClicked() {
